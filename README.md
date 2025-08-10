@@ -53,4 +53,4 @@ The model is trained on 60,000 digit images and tested on 10,000 digit images, a
 - **Validation split:** 0.1  
 
 ### ✅ Accuracy
-- **Test Accuracy:** `99%` *(replace with your actual result)
+- **Test Accuracy:** `99.22%`
