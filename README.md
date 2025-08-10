@@ -1,27 +1,32 @@
-# MNIST Handwritten Digit Classifier 🖊️🔢  
+# 🖋 Digit Recognition using CNN (MNIST Dataset)
 
-This project is a simple **Neural Network** built using **TensorFlow/Keras** to recognize handwritten digits from the **MNIST dataset** with high accuracy (~97%).  
-
-## 📌 Overview  
-The model:  
-- Takes **28×28 pixel grayscale images** of digits (0–9) as input.  
-- Flattens them into a **784-element vector**.  
-- Passes through a **fully connected hidden layer** with ReLU activation.  
-- Outputs probabilities for **10 digit classes** using softmax.  
-
-**Test Accuracy Achieved:** ~97.5% ✅  
+## 📌 Overview
+This project implements a **Convolutional Neural Network (CNN)** using **TensorFlow** and **Keras** to classify handwritten digits from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/).  
+The model is trained on 60,000 digit images and tested on 10,000 digit images, achieving high accuracy.
 
 ---
 
-## 🗂 Dataset  
-We use the **MNIST dataset** included in `tensorflow.keras.datasets`.  
-- **60,000** images for training  
-- **10,000** images for testing  
+## 📂 Dataset
+- **MNIST** dataset contains:
+  - 60,000 training images
+  - 10,000 testing images  
+- Image details:
+  - Grayscale  
+  - 28×28 pixels  
+  - Digits labeled from **0 to 9**
 
 ---
 
-## ⚙️ Requirements  
-Install the dependencies before running the script:  
-
-```bash
-pip install tensorflow
+## ⚙ Steps in the Project
+1. **Load Dataset** – MNIST dataset is loaded directly from Keras.
+2. **Preprocessing** –  
+   - Normalize pixel values (0–255 → 0–1)  
+   - Reshape data for CNN input  
+   - One-hot encode labels  
+3. **Build the Model** –  
+   - 2 convolutional layers with max pooling  
+   - Flatten layer  
+   - Dense + Dropout layer for regularization  
+4. **Compile Model** – Using Adam optimizer & categorical crossentropy loss.
+5. **Tr**
+6.
